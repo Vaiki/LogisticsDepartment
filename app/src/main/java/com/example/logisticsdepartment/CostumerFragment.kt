@@ -5,10 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.logisticsdepartment.databinding.FragmentCostumerBinding
 
 
-class CostumerFragment : Fragment(R.layout.fragment_costumer) {
+class CostumerFragment : Fragment() {
 
     private var _binding:FragmentCostumerBinding? = null
     private val binding get() = _binding!!
@@ -23,7 +24,9 @@ class CostumerFragment : Fragment(R.layout.fragment_costumer) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.fbAddOrder.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_costumerFragment_to_createOrderFragment)
+        }
 
     }
 

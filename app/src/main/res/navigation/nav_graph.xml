@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grah"
+    app:startDestination="@id/costumerFragment">
+
+    <fragment
+        android:id="@+id/costumerFragment"
+        android:name="com.example.logisticsdepartment.CostumerFragment"
+        android:label="fragment_costumer"
+        tools:layout="@layout/fragment_costumer" >
+        <action
+            android:id="@+id/action_costumerFragment_to_createOrderFragment"
+            app:destination="@id/createOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createOrderFragment"
+        android:name="com.example.logisticsdepartment.CreateOrderFragment"
+        android:label="fragment_create_order"
+        tools:layout="@layout/fragment_create_order" >
+        <action
+            android:id="@+id/action_createOrderFragment_to_RVViewingOrder2"
+            app:destination="@id/RVViewingOrder2" />
+        <action
+            android:id="@+id/action_createOrderFragment_to_costumerFragment"
+            app:destination="@id/costumerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RVViewingOrder2"
+        android:name="com.example.logisticsdepartment.RVViewingOrder"
+        android:label="fragment_r_v_viewing_order"
+        tools:layout="@layout/fragment_r_v_viewing_order" >
+        <action
+            android:id="@+id/action_RVViewingOrder2_to_costumerFragment"
+            app:destination="@id/costumerFragment" />
+        <action
+            android:id="@+id/action_RVViewingOrder2_to_createOrderFragment"
+            app:destination="@id/createOrderFragment" />
+    </fragment>
+</navigation>

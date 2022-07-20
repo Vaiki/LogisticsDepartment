@@ -12,10 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Создание заявки"
-        android:textSize="24dp"
         android:textAlignment="center"
-        android:textStyle="bold"
-        />
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/enterEquipment"
@@ -47,7 +46,9 @@
             android:id="@+id/etDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:maxLines="20" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -100,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerDepartment">
 
         <Button
-            android:id="@+id/btn_save_or_update"
+            android:id="@+id/btnViewing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -110,7 +111,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btn_delete"
+            android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -121,7 +122,8 @@
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="0dp"/>
+        android:layout_height="0dp" />
 </androidx.appcompat.widget.LinearLayoutCompat>
