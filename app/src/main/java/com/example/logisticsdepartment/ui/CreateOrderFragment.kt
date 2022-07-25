@@ -1,17 +1,21 @@
-package com.example.logisticsdepartment
+package com.example.logisticsdepartment.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Toast
 import androidx.navigation.Navigation
+import com.example.logisticsdepartment.R
 
 import com.example.logisticsdepartment.databinding.FragmentCreateOrderBinding
+import com.example.logisticsdepartment.db.Request
 
 
 class CreateOrderFragment : Fragment(R.layout.fragment_create_order) {
     private var _binding: FragmentCreateOrderBinding? = null
     private val binding get() = _binding!!
+    private var name: String? = null
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -21,6 +25,9 @@ class CreateOrderFragment : Fragment(R.layout.fragment_create_order) {
                 .navigate(R.id.action_createOrderFragment_to_RVViewingOrder2)
         }
         binding.btnAdd.setOnClickListener {
+
+
+
             Toast.makeText(context, "Заявка добавлена в заказ", Toast.LENGTH_LONG).show()
             clearView()
         }

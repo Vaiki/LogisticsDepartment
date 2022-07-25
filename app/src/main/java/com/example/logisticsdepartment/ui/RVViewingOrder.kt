@@ -1,10 +1,11 @@
-package com.example.logisticsdepartment
+package com.example.logisticsdepartment.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Toast
 import androidx.navigation.Navigation
+import com.example.logisticsdepartment.R
 import com.example.logisticsdepartment.databinding.FragmentRVViewingOrderBinding
 
 
